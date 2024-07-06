@@ -615,9 +615,24 @@ footer {
 
 /* Media Queries */
 
-/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .header-right {
+        display: none;
+    }
+    
+    .logo img {
+        height: 30px;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+}
 
-/* Ponsel kecil (max-width: 480px) */
 @media (max-width: 480px) {
     .header-container {
         flex-direction: column; /* Stack header items vertically on very small screens */
@@ -652,174 +667,116 @@ footer {
     .hamburger {
         display: flex; /* Show hamburger menu */
     }
+}
 
+
+@media (max-width: 1200px) {
+    .detail-box, .product-pricing {
+        flex: 1 1 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+    }
+    .detail-box, .product-pricing {
+        flex: 1 1 100%;
+        margin: 10px 0;
+        width: 100%;
+        margin-bottom: 1px;
+        
+      
+        
+    }
+    .detail-box{
+        margin-top: 20px;
+    }
+    .price-item {
+        flex: 1 1 calc(50% - 20px);
+        
+    }
+}
+
+/* Untuk ukuran HP */
+@media (max-width: 480px) {
     .product-details {
         flex-direction: column;
         margin: 0;
         padding: 0 10px; /* Menambahkan padding agar tidak menempel di tepi layar */
     }
-    
     .detail-box, .product-pricing {
         flex: 1 1 100%;
         padding: 15px;
         margin: 10px 0;
         width: calc(100% - 20px); /* Menyesuaikan lebar agar tidak keluar dari layar */
+        
     }
-    
     .price-item {
         flex: 1 1 100%;
         margin: 5px 0;
         padding: 10px;
         width: calc(100% - 20px); /* Menyesuaikan lebar agar tidak keluar dari layar */
     }
-
-    .banner-content {
-        padding-top: 100px;
-    }
-    
-    .banner-text h1, .banner-text h2 {
-        font-size: 18px;
-    }
-    
-    .banner-text {
-        margin-top: 10px;
-    }
-    
-    .banner-image {
-        width: 100px;
-        height: 100px;
-    }
-
-    .product img {
-        height: 200px; /* Adjust height for smaller screens */
-    }
-
-    .slick-dots {
-        bottom: 100px; /* Adjust this value as needed */
-    }
-
-    .slick-prev, .slick-next {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-        line-height: 30px;
-    }
-
-    .slick-prev::before, .slick-next::before {
-        font-size: 30px;
-    }
-
-    .slick-prev {
-        left: 10px;
-    }
-
-    .slick-next {
-        right: 10px;
-    }
 }
 
-/* Ponsel sedang hingga besar (max-width: 768px) */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .header-right {
-        display: none;
-    }
-    
-    .logo img {
-        height: 30px;
-    }
-    
-    .hamburger {
-        display: flex;
-    }
-
-    .product-details {
-        flex-direction: column;
-    }
-    
-    .detail-box, .product-pricing {
-        flex: 1 1 100%;
-        margin: 10px 0;
-        width: 100%;
-        margin-bottom: 1px;
-    }
-    
-    .detail-box {
-        margin-top: 20px;
-    }
-    
-    .price-item {
-        flex: 1 1 calc(50% - 20px);
-    }
-
-    .banner-content {
-        padding-top: 270px;
-    }
-    
-    .banner-text h1, .banner-text h2 {
-        font-size: 20px;
-    }
-    
-    .banner-text {
-        margin-top: 10px;
-    }
-    
-    .banner-image {
-        width: 150px;
-        height: 150px;
-        margin-right: 300px;
-    }
-
-    .product img {
-        height: 300px; /* Adjust height for smaller screens */
-    }
-
-    .slick-dots {
-        bottom: 100px; /* Adjust this value as needed */
-    }
-
-    .slick-prev, .slick-next {
-        width: 50px;
-        height: 50px;
-        font-size: 25px;
-        line-height: 40px;
-    }
-
-    .slick-prev::before, .slick-next::before {
-        font-size: 40px;
-    }
-
-    .slick-prev {
-        left: 15px;
-    }
-
-    .slick-next {
-        right: 15px;
-    }
-}
-
-/* Tablet hingga Desktop (max-width: 1200px) */
+/* Responsive Design */
 @media (max-width: 1200px) {
-    .detail-box, .product-pricing {
-        flex: 1 1 48%;
-    }
-
     .banner-content {
         flex-direction: column;
         padding-top: 250px;
     }
-    
     .banner-text {
         margin-top: 15px;
         margin-left: 0;
         text-align: center;
     }
-    
     .banner-image {
         margin-right: 500px;
         margin-top: 10px;
+        
+
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content {
+        padding-top: 270px;
+    }
+    .banner-text h1, .banner-text h2 {
+        font-size: 20px;
+        
+    }
+    .banner-text {
+        margin-top: 0px;
+    }
+    .banner-image {
+        width: 80px;
+        height: 80px;
+        margin-right: 300px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-content {
+        padding-top: 100px;
+    }
+    .banner-text h1, .banner-text h2 {
+        font-size: 18px;
+    }
+    .banner-text {
+        margin-top: 10px;
+    }
+    .banner-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-description {
+        width: 100%; /* Lebar 100% untuk layar kecil */
+        margin-top: 10px; /* Jarak atas lebih kecil */
     }
 }
