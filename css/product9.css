@@ -612,14 +612,6 @@ footer {
 }
 
 
-* {
-    box-sizing: inherit;
-}
-
-.container {
-    max-width: 100%;
-    overflow-x: hidden;
-}
 
 /* Media Queries */
 
