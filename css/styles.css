@@ -253,11 +253,7 @@ main {
     border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-    .product img {
-        height: 300px; /* Sesuaikan tinggi untuk layar yang lebih kecil */
-    }
-}
+
 
 
 .product h2 {
@@ -343,30 +339,6 @@ main {
 .slick-prev:hover, .slick-next:hover {
     background: rgba(208, 2, 2, 0.75);
     color: rgb(242, 255, 0);
-}
-
-@media (max-width: 768px) {
-    .product img {
-        height: 300px; /* Adjust height for smaller screens */
-    }
-
-    .slick-dots {
-        position: absolute;
-        bottom: 200px; /* Adjust this value as needed */
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        z-index: 10;
-    }
-}
-
-@media (max-width: 480px) {
-    .product img {
-        height: 200px;
-    }
-   
 }
 
 
@@ -732,22 +704,7 @@ main {
     background-color: #555;
 }
 
-@media (max-width: 768px) {
-    .bottom-info-content {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 80%;
-        margin: 10px 0;
-        
-    }
 
-    .logo-description,
-    .site-map,
-    .support,
-    .legal {
-        flex: 1 1 100%;
-    }
-}
 
 footer {
     background-color: rgba(111, 94, 38, 0.8); /* Slightly transparent background */
@@ -757,44 +714,12 @@ footer {
     z-index: 1; /* Ensure footer is above the blur */
 }
 
-@media (max-width: 768px) {
-    .pricing-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .pricing-card {
-        flex: 1 1 auto;
-        width: 80%;
-        margin: 10px 0;
-    }
-}
-
+/* Ponsel kecil */
 @media (max-width: 480px) {
     .pricing-card {
         width: 100%;
     }
-}
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .header-right {
-        display: none;
-    }
-    
-    .logo img {
-        height: 30px;
-    }
-    
-    .hamburger {
-        display: flex;
-    }
-}
-
-@media (max-width: 480px) {
     .header-container {
         flex-direction: column; /* Stack header items vertically on very small screens */
         align-items: flex-start;
@@ -828,16 +753,82 @@ footer {
     .hamburger {
         display: flex; /* Show hamburger menu */
     }
-}
 
-/* Gaya Responsif */
-@media (min-width: 1200px) {
     .product-item {
-        flex: 1 1 calc(20% - 30px); /* Desktop */
-        max-width: calc(20% - 30px);
+        flex: 1 1 calc(100% - 30px); /* Ponsel kecil */
+        max-width: calc(100% - 30px);
+    }
+
+    .product img {
+        height: 200px; /* Adjust height for smaller screens */
     }
 }
 
+/* Ponsel sedang hingga besar */
+@media (max-width: 768px) {
+    .bottom-info-content {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .logo-description,
+    .site-map,
+    .support,
+    .legal {
+        flex: 1 1 100%;
+    }
+
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card {
+        flex: 1 1 auto;
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    
+    .header-right {
+        display: none;
+    }
+    
+    .logo img {
+        height: 30px;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+
+    .product-item {
+        flex: 1 1 calc(33.333% - 30px); /* Tablet */
+        max-width: calc(33.333% - 30px);
+    }
+
+    .product img {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .slick-dots {
+        position: absolute;
+        bottom: 200px; /* Adjust this value as needed */
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        z-index: 10;
+    }
+}
+
+/* Tablet hingga Desktop */
 @media (min-width: 768px) and (max-width: 1199px) {
     .product-item {
         flex: 1 1 calc(33.333% - 30px); /* Tablet */
@@ -845,16 +836,10 @@ footer {
     }
 }
 
-@media (max-width: 767px) {
+/* Desktop besar */
+@media (min-width: 1200px) {
     .product-item {
-        flex: 1 1 calc(33.333% - 30px); /* Tablet */
-        max-width: calc(33.333% - 30px);
+        flex: 1 1 calc(20% - 30px); /* Desktop */
+        max-width: calc(20% - 30px);
     }
 }
-@media (max-width: 480px) {
-    .product-item {
-        flex: 1 1 calc(100% - 30px); /* Ponsel kecil */
-        max-width: calc(100% - 30px);
-    }
-}
-
