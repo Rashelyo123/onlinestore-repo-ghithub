@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promosi Produk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="../css/styles.css">
+   
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="../Desain tanpa judul (14).png" alt="Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Cek Transaksi</a></li>
+                    <li><a href="#">Kalkulator</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="search">
+                    <input type="text" id="search" placeholder="Search" onkeyup="filterProducts()">
+                    <button onclick="filterProducts()">Search</button>
+                    <div class="search-results" id="search-results">
+                        <ul id="results-list"></ul>
+                    </div>
+                </div>
+                <div class="language-selector">
+                    <select>
+                        <option value="ID">ID</option>
+                        <option value="EN">EN</option>
+                    </select>
+                </div>
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const hamburger = document.querySelector('.hamburger');
+                    const sidebar = document.querySelector('.sidebar');
+                    const closeBtn = document.querySelector('.close-btn');
+            
+                    hamburger.addEventListener('click', function() {
+                        sidebar.classList.toggle('active');
+                    });
+            
+                    closeBtn.addEventListener('click', function() {
+                        sidebar.classList.remove('active');
+                    });
+                });
+            </script>
+            
+        </div>
+    </header>
+    <div class="sidebar">
+        <div class="close-btn">&times;</div>
+        <div class="sidebar-content">
+            <div class="search">
+                <input type="text" id="search" placeholder="Search" onkeyup="filterProducts()">
+                <button id="search-button" onclick="filterProducts()">Search</button>
+                <div class="search-results" id="sidebar-search-results">
+                    <ul id="sidebar-results-list"></ul>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Cek Transaksi</a></li>
+                    <li><a href="#">Kalkulator</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <select>
+                    <option value="ID">ID</option>
+                    <option value="EN">EN</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="product-slider">
+            <div class="product">
+                <img src="../ImageSlider/Desain tanpa judul (12).png" alt="Nama Produk 1">
+                <h2>Spotify</h2>
+                <p>Musik premium yang berbagai macam fitur seperti non-Aktifkan iklan.</p>
+            </div>
+            <div class="product">
+                <img src="../ImageSlider/youtube slider.png" alt="Nama Produk 2">
+                <h2>Youtube Premium</h2>
+                <p>video bebas iklan, pemutaran di latar belakang, video yang Anda tonton secara offline, dan banyak lagi.</p>
+            </div>
+            <div class="product">
+                <img src="../ImageSlider/netflix Slider.png" alt="Nama Produk 3">
+                <h2>Netflix</h2>
+                <p> menawarkan berbagai acara TV pemenang penghargaan, film, anime, dokumenter, dan banyak lagi di ribuan perangkat yang terhubung ke Internet. Kamu bisa menonton sepuasnya, kapan pun kamu mau–semuanya dengan satu harga bulanan yang murah..</p>
+            </div>
+        </section>
+        <section class="product-menu">
+            <h2>Pilih Paket Premium Yang Kami Sediakan</h2>
+            <div class="product-grid" id="product-grid">
+                <div class="product-item" data-link="product1.html">
+                    <img src="../imageMenu/netflix menu.png" alt="Produk 1">
+                    <h3>Netflix All Plan</h3>
+                </div>
+                <div class="product-item" data-link="product2.html">
+                    <img src="../imageMenu/youtube menu.png" alt="Produk 2">
+                    <h3>Youtube Premium</h3>
+                </div>
+                <div class="product-item" data-link="product3.html">
+                    <img src="../imageMenu/Spotify Menu.png" alt="Produk 3">
+                    <h3>Spotify Premium</h3>
+                </div>
+                <div class="product-item" data-link="product4.html">
+                    <img src="../imageMenu/Canva Menu.png" alt="Produk 4">
+                    <h3>Canva Pro</h3>
+                </div>
+                <div class="product-item" data-link="product5.html">
+                    <img src="../imageMenu/disney Menu.png" alt="Produk 5">
+                    <h3>Disney Hostar</h3>
+                </div>
+                <div class="product-item" data-link="product6.html">
+                    <img src="../imageMenu/Bstation Menu.png" alt="Produk 6">
+                    <h3>bstation</h3>
+                </div>
+                <div class="product-item" data-link="product7.html">
+                    <img src="../imageMenu/Iqiyi Menu.png" alt="Produk 7">
+                    <h3>IQIYI</h3>
+                </div>
+                <div class="product-item" data-link="product8.html">
+                    <img src="../imageMenu/Amazon Menu.png" alt="Produk 8">
+                    <h3>Amazon Prime</h3>
+                </div>
+                <div class="product-item" data-link="product9.html">
+                    <img src="../imageMenu/Vidio Menu.png" alt="Produk 9">
+                    <h3>Vidio Platinum</h3>
+                </div>
+                <div class="product-item" data-link="product10.html">
+                    <img src="../imageMenu/WeTv menu.png" alt="Produk 10">
+                    <h3>WeTV</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function filterProducts() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const productItems = document.querySelectorAll('.product-item');
+            const resultsList = document.getElementById('results-list');
+            const sidebarResultsList = document.getElementById('sidebar-results-list');
+            const searchResults = document.getElementById('search-results');
+            const sidebarSearchResults = document.getElementById('sidebar-search-results');
+
+            resultsList.innerHTML = '';
+            sidebarResultsList.innerHTML = '';
+
+            let matches = 0;
+
+            for (const item of productItems) {
+                const productName = item.querySelector('h3').innerText.toLowerCase();
+                if (productName.includes(searchInput)) {
+                    matches++;
+                    const resultItem = document.createElement('li');
+                    resultItem.innerText = item.querySelector('h3').innerText;
+                    resultItem.addEventListener('click', function() {
+                        window.location.href = item.getAttribute('data-link');
+                    });
+                    resultsList.appendChild(resultItem);
+                    sidebarResultsList.appendChild(resultItem.cloneNode(true));
+                }
+            }
+
+            if (matches > 0) {
+                searchResults.style.display = 'block';
+                sidebarSearchResults.style.display = 'block';
+            } else {
+                searchResults.style.display = 'none';
+                sidebarSearchResults.style.display = 'none';
+            }
+        }
+    </script>
+        <section class="pricing-table">
+            <h2>Paket Paling Favorit</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Youtube Fam 1 bulan</h3>
+                    <p class="price">Rp 7.000</p>
+                    <ul>
+                        <li>Bebas Iklan</li>
+                        <li>Donwload Vidio HD</li>
+                        <li>Fitur Putar Di Latar belakang </li>
+                    </ul>
+                    <a href="https://wa.me/6283847114737?text=Halo,%20saya%20ingin%20membeli%20paket%20YoutubeFam(1bulan)." class="btn">Beli Sekarang</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Netflix 1 bulan </h3>
+                    <p class="price">Rp 43.000</p>
+                    <ul>
+                        <li>Akses Semua Film Netflix</li>
+                        <li>Mengundug Film</li>
+                        
+                    </ul>
+                    <a href="https://wa.me/6283847114737?text=Halo,%20saya%20ingin%20membeli%20paket%20Netflix(1bulan)." class="btn">Beli Sekarang</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Spotify 1 bulan fam</h3>
+                    <p class="price">Rp 12,000</p>
+                    <ul>
+                        <li>Bebas Iklan</li>
+                        <li>Putar Lagu dalam urutan apapun</li>
+                        <li>Mendengarkan bersama teman</li>
+                       
+                    </ul>
+                    <a href="https://wa.me/6283847114737?text=Halo,%20saya%20ingin%20membeli%20paket%20Spotify%201Bulan(fam)." class="btn">Beli Sekarang</a>
+                </div>
+            </div>
+        </section>
+        <div class="comment-section">
+            <h2>Tinggalkan Komentar Anda</h2>
+            <form id="commentForm">
+                <input type="text" id="name" placeholder="Nama Anda" required>
+                <input type="email" id="email" placeholder="Email Anda" required>
+                <textarea id="message" placeholder="Komentar Anda" required></textarea>
+                <button type="submit">Kirim Komentar</button>
+            </form>
+            <div id="comments-section">
+                <h3>Komentar Pelanggan</h3>
+                <div id="comments">
+                    <div class="comment">
+                        <h4>Netflix all Plan</h4>
+                        <p>"Proses cepat banget"</p>
+                        <span>628******933</span>
+                        <div class="rating">★★★★★</div>
+                        <div class="comment-details">
+                            <span>1 bulan (1p-1u)</span>
+                            <span>04-07-2024 14:27:39</span>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <h4>Spotify</h4>
+                        <p>"Murah banget auto b5"</p>
+                        <span>620******008</span>
+                        <div class="rating">★★★★★</div>
+                        <div class="comment-details">
+                            <span>1 bulan indplan</span>
+                            <span>04-07-2024 19:24:21</span>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <h4>Youtube Premium</h4>
+                        <p>"Gada kendala seller ramah mntppp"</p>
+                        <span>628******003</span>
+                        <div class="rating">★★★★★</div>
+                        <div class="comment-details">
+                            <span>3 bulan (Mixplan)</span>
+                            <span>04-07-2024 16:29:39</span>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <h4>Youtube Premium</h4>
+                        <p>"Keren si dengan harga segini wort it lah"</p>
+                        <span>628******985</span>
+                        <div class="rating">★★★★★</div>
+                        <div class="comment-details">
+                            <span>2 bulan (indplan)</span>
+                            <span>04-07-2024 18:01:38</span>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <h4>Canva Pro</h4>
+                        <p>"Tambahin paket life-time dong"</p>
+                        <span>628******104</span>
+                        <div class="rating">★★★</div>
+                        <div class="comment-details">
+                            <span>Canva Pro 1 bulan</span>
+                            <span>04-07-2024 10:42:28</span>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <h4>Disney Hotstar</h4>
+                        <p>"Akhirnya bisa nonton disneyyy"</p>
+                        <span>628******577</span>
+                        <div class="rating">★★★★★</div>
+                        <div class="comment-details">
+                            <span>1 bulan Sharing 3 User</span>
+                            <span>04-07-2024 10:15:25</span>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <h4>Netflix all Plan</h4>
+                        <p>"GG"</p>
+                        <span>628******378</span>
+                        <div class="rating">★★★★★</div>
+                        <div class="comment-details">
+                            <span>1 bulan (private)</span>
+                            <span>04-07-2024 10:10:18</span>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <h4>Iqiyi</h4>
+                        <p>"Fast respon"</p>
+                        <span>620******666</span>
+                        <div class="rating">★★★★★</div>
+                        <div class="comment-details">
+                            <span>1 bulan (sharing 3 user)</span>
+                            <span>04-07-2024 10:00:12</span>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <h4>Youtube Premium</h4>
+                        <p>"Gada kendala min"</p>
+                        <span>628******501</span>
+                        <div class="rating">★★★★★</div>
+                        <div class="comment-details">
+                            <span>1 bulan (famplan)</span>
+                            <span>02-07-2024 09:45:08</span>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <h4>Spotify</h4>
+                        <p>"Awalnya ragu gegara beli spotify need pw eh ternyata prosesnya emg gitu wwwkkwk"</p>
+                        <span>628******901</span>
+                        <div class="rating">★★★★★</div>
+                        <div class="comment-details">
+                            <span>1 bulan (indplan)</span>
+                            <span>03-08-2024 09:30:05</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="showAllComments">Lihat Semua Komentar</button>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const comments = document.querySelectorAll('#comments .comment');
+                    const showAllButton = document.getElementById('showAllComments');
+        
+                    // Tampilkan hanya 5 komentar pertama
+                    for (let i = 5; i < comments.length; i++) {
+                        comments[i].style.display = 'none';
+                    }
+        
+                    // Tampilkan semua komentar saat tombol diklik
+                    showAllButton.addEventListener('click', function () {
+                        for (let i = 5; i < comments.length; i++) {
+                            comments[i].style.display = 'block';
+                        }
+                        showAllButton.style.display = 'none';
+                    });
+                });
+            </script>
+        </div>
+    
+        <div class="bottom-info">
+            <div class="bottom-info-content">
+                <div class="logo-description">
+                    <img class="logo" src="../Desain tanpa judul (14).png" alt="Logo">
+                    <p>ADA NOIR STORE adalah tempat pembelian akun all premium 100% legal dan terpercaya. Proses cepat 1-3 Detik. Open 24 jam. Payment terlengkap. Jika ada kendala silahkan klik logo CS pada kanan bawah di website ini.</p>
+                </div>
+               
+                <div class="site-map">
+                    <h3>Peta Situs</h3>
+                    <ul>
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#">Cek Transaksi</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">Ulasan</a></li>
+                    </ul>
+                </div>
+                <div class="support">
+                    <h3>Dukungan</h3>
+                    <ul>
+                        <li><a href="#">Whatsapp</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Email</a></li>
+                    </ul>
+                </div>
+                <div class="legal">
+                    <h3>Legalitas</h3>
+                    <ul>
+                        <li><a href="#">Kebijakan Pribadi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="social-media-icons">
+                <a href="#"><img src="../intagram-removebg-preview.png" alt="Social Media 1"></a>
+                <a href="#"><img src="../tiktok-removebg-preview.png" alt="Social Media 2"></a>
+                <a href="#"><img src="../email-removebg-preview.png" alt="Social Media 3"></a>
+            </div>
+        </div>a
+    </main>
+    
+    <script src="scripts.js"></script>
+    <footer>
+        <p>Hubungi kami di WhatsApp: <a href="https://wa.me/083847114737">+62 838-4711-4737</a></p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
