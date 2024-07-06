@@ -612,60 +612,14 @@ footer {
 }
 
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .header-right {
-        display: none;
-    }
-    
-    .logo img {
-        height: 30px;
-    }
-    
-    .hamburger {
-        display: flex;
-    }
+* {
+    box-sizing: inherit;
 }
 
-@media (max-width: 480px) {
-    .header-container {
-        flex-direction: column; /* Stack header items vertically on very small screens */
-        align-items: flex-start;
-    }
-
-    .nav-links.active {
-        display: flex; /* Show nav links when active */
-        flex-direction: column; /* Stack nav links vertically */
-        width: 100%;
-        background-color: #1d1d1d; /* Match header background */
-        position: absolute;
-        top: 70px; /* Position below header */
-        left: 0;
-        padding: 10px 0;
-    }
-
-    .nav-links li {
-        margin: 10px 0; /* Add margin between nav items */
-        text-align: center;
-    }
-
-    .nav-links a {
-        font-size: 18px; /* Adjust font size for smaller screens */
-    }
-
-    .search input, .search button, .language-selector select {
-        width: 100%; /* Make input, button, and select take full width */
-        margin: 5px 0; /* Add margin for spacing */
-    }
-
-    .hamburger {
-        display: flex; /* Show hamburger menu */
-    }
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
 }
-
 
 /* Media Queries */
 
